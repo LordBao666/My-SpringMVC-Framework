@@ -12,6 +12,7 @@
         <module>springmvc-quickstart</module>
         <module>springmvc-receive-data</module>
         <module>springmvc-response-data</module>
+        <module>springmvc-restful</module>
     </modules>
 
     <properties>
