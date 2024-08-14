@@ -13,6 +13,7 @@
         <module>springmvc-receive-data</module>
         <module>springmvc-response-data</module>
         <module>springmvc-restful</module>
+        <module>springmvc-advanced-features</module>
     </modules>
 
     <properties>
