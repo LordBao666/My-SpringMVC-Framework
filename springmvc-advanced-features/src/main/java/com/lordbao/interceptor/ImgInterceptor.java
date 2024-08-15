@@ -11,7 +11,6 @@ import org.springframework.web.servlet.ModelAndView;
  * @Version 1.0
  */
 public class ImgInterceptor implements HandlerInterceptor {
-
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         System.out.println("ImgInterceptor.preHandle");

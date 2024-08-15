@@ -1,25 +1,16 @@
 package com.lordbao.config;
 
-import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 /**
  * @Author Lord_Bao
  * @Date 2024/8/13 15:26
  * @Version 1.0
  */
-public class SpringMVCConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
-    @Override
-    protected Class<?>[] getRootConfigClasses() {
-        return new Class[0];
-    }
-
-    @Override
-    protected Class<?>[] getServletConfigClasses() {
-        return new Class[]{BeanConfig.class};
-    }
-
-    @Override
-    protected String[] getServletMappings() {
-        return new String[]{"/"};
-    }
+@Configuration
+@EnableWebMvc
+@ComponentScan("com.lordbao.controller")
+public class SpringMVCConfig {
 }

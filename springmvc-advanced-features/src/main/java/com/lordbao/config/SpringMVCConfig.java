@@ -1,25 +1,29 @@
 package com.lordbao.config;
 
-import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * @Author Lord_Bao
- * @Date 2024/8/14 8:40
+ * @Date 2024/8/14 8:45
  * @Version 1.0
  */
-public class SpringMVCConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
-    @Override
-    protected Class<?>[] getRootConfigClasses() {
-        return new Class[0];
-    }
+@Configuration
+@EnableWebMvc
+@ComponentScan("com.lordbao")
+public class SpringMVCConfig implements WebMvcConfigurer {
 
-    @Override
-    protected Class<?>[] getServletConfigClasses() {
-        return new Class[]{BeanConfig.class};
-    }
 
-    @Override
-    protected String[] getServletMappings() {
-        return new String[]{"/"};
-    }
+
+//    @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
+//       //intercept requests to visit images
+//       registry.addInterceptor(new ImgInterceptor())
+//               .addPathPatterns("/images/**");
+//
+//       //intercept all requests.
+//       registry.addInterceptor(new GeneralInterceptor());
+//    }
 }

@@ -12,8 +12,8 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
  * @Version 1.0
  */
 @Configuration
-@ComponentScan("com.lordbao")
-public class BeanConfig {
+@ComponentScan("com.lordbao.controller")
+public class SpringMVCConfig {
 
     @Bean
     public RequestMappingHandlerMapping handlerMapping(){

@@ -6,11 +6,11 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 /**
  * @Author Lord_Bao
- * @Date 2024/8/13 15:26
+ * @Date 2024/8/9 12:57
  * @Version 1.0
  */
-@Configuration
 @EnableWebMvc
-@ComponentScan("com.lordbao")
-public class BeanConfig {
+@Configuration
+@ComponentScan("com.lordbao.controller")
+public class SpringMVCConfig {
 }
