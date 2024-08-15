@@ -241,7 +241,7 @@ public class SpringMVCConfig {
 }
 ```
 
-在SpringMVC接收数据一章中(详细细节见那里的笔记)，曾谈到`@EnableWebMvc`的效果等价于在XML配置中声明``<mvc:annotation-driven>` `，而该声明与如下代码相关
+在SpringMVC接收数据一章中(详细细节见那里的笔记)，曾谈到`@EnableWebMvc`的效果等价于在XML配置中声明`<mvc:annotation-driven>` ，而该声明与如下代码相关
 
 ![image-20240814214017543](README/image-20240814214017543.png)
 
