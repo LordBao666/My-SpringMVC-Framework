@@ -419,6 +419,60 @@ RESTFul 就是指导我们怎么去设计HTTP的API接口，比如我们在设�
 
 <br>
 
+## 小结和补充
+
+SpringMVC的重点
+
+1. 如何接收数据
+2. 如何响应数据
+
+RESTFul 风格，它也隶属于上述重点。SpringMVC 高级特性 是高级特性，但却并非必备的，做好笔记，方便以后查阅。
+
+![image](README/image.png)
+
+SpringMVC的核心是上述流程图，熟记！
+
+
+
+**SpringMVC的核心配置类**
+
+```java
+package com.lordbao.config;
+
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+/**
+ * @Author Lord_Bao
+ * @Date 2024/8/14 8:40
+ * @Version 1.0
+ */
+public class SpringMVCInitConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
+    @Override
+    protected Class<?>[] getRootConfigClasses() {
+        return new Class[0];
+    }
+
+    @Override
+    protected Class<?>[] getServletConfigClasses() {
+        return new Class[]{SpringMVCConfig.class};
+    }
+
+    @Override
+    protected String[] getServletMappings() {
+        return new String[]{"/"};
+    }
+}
+```
+
+上诉代码为SpringMVC核心配置类，但实际上我们没有阐述`getRootConfigClasses()`。在SpringMVC中，其实有2个 IOC 容器来管理组件：
+
+1. `getRootConfigClasses()`对应root容器，用于管理service 和 mapper等。
+2. `getServletConfigClasses()`对应web容器，用于管理controller和SpringMVC的相关组件，如HandlerMapping，HandlerAdapter，视图解析器等。
+
+SpringMVC的相关知识点还会出现在后面的SSM整合中，此处暂且不表
+
+
+
 # SpringMVC学习顺序
 
 - 入门：springmvc-quickstart
